@@ -9,6 +9,7 @@ import {
   Container,
   Form,
   FormControl,
+  Jumbotron,
   Nav,
   Navbar,
   NavDropdown,
@@ -27,36 +28,44 @@ const Home = () => {
     <>
       <div className="bg-image"></div>
       <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-        <Navbar.Brand href="#home">
-          <img
-            src={logo}
-            height="38"
-            className="d-inline-block align-top pt-1"
-            alt="React Bootstrap logo"
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Refeições Congeladas</Nav.Link>
-            <Nav.Link href="#link">Kits</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
+        <Container fluid="md">
+          <Navbar.Brand href="#home">
+            <img
+              src={logo}
+              height="38"
+              className="d-inline-block align-top pt-1"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="#home">Refeições Congeladas</Nav.Link>
+              <Nav.Link href="#link">Kits</Nav.Link>
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Form inline>
+              <FormControl
+                type="text"
+                placeholder="Search"
+                className="mr-sm-2"
+              />
+              <Button variant="outline-success">Search</Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
       </Navbar>
       {/* end Navbar */}
 
@@ -78,8 +87,8 @@ const Home = () => {
       {/* End Carousel */}
 
       {/* start cards section */}
-      <Container fluid className="px-5 mt-4">
-        <Row xs={1} md={4} className="g-4">
+      <Container fluid="md" className="px-5 mt-5">
+        <Row className="g-4">
           <Col className="mb-4">
             <Card className="me-2 custom-card custom-card">
               <Card.Img
@@ -174,8 +183,8 @@ const Home = () => {
       {/* end cards section */}
 
       {/* start cards section */}
-      <Container fluid className="px-5 mt-4">
-        <Row xs={1} md={4} className="g-4">
+      <Container fluid="md" className="px-5 mt-4">
+        <Row className="g-4">
           <Col className="mb-4">
             <Card className="me-2 custom-card">
               <Card.Img
@@ -270,7 +279,7 @@ const Home = () => {
       {/* end cards section */}
 
       {/* start about us section */}
-      <Container fluid className="px-5 mt-4">
+      <Container fluid="md" className="px-5 mt-4">
         <Row xs={1} md={2}>
           <Col className="mb-4">
             <div
@@ -314,7 +323,7 @@ const Home = () => {
       {/* end about us section */}
 
       {/* start frequently questions section */}
-      <Container fluid className="px-5 mt-4">
+      <Container fluid="md" className="px-5 mt-4">
         <Row xs={1} md={1}>
           <Col className="mb-4">
             {/* <div
@@ -385,6 +394,56 @@ const Home = () => {
         </Row>
       </Container>
       {/* end frequently questions section */}
+
+      {/* start footer */}
+
+      <Container fluid className="footer">
+        <Row xs={1} md={1} lg={2} className="pt-5 px-5 align-items-center">
+          <Col className="align-self-lg-center">
+            <div className="d-flex flex-column justify-content-start">
+              <img
+                src={logo}
+                height="38"
+                className="d-inline-block align-top align-self-start pt-1"
+                alt="React Bootstrap logo"
+              />
+              <p className="">eat healthy, be healthy</p>
+            </div>
+          </Col>
+          <Col className="align-self-center ">
+            <div className="d-flex justify-content-between flex-md-row flex-column">
+
+            <div className="d-flex justify-content-start justify-content-sm-end">
+              <div className="">
+                <p className="title">Serviços</p>
+                <p>Fale conosco</p>
+              </div>
+            </div>
+            <div className="d-flex justify-content-start justify-content-sm-end">
+              <div className="">
+                <p className="title">Sobre</p>
+                <p>Sobre Nós</p>
+              </div>
+            </div>
+            <div className="d-flex justify-content-start justify-content-sm-end">
+              <div className="">
+                <p className="title">REDES SOCIAIS</p>
+              </div>
+            </div>
+            </div>
+
+          </Col>
+        </Row>
+        <Row className="d-flex justify-content-center pb-0">
+          <Col className="d-flex justify-content-center pb-3">
+            <p className="mb-0 text-muted">
+              Copyright © 2021. BeHealthy. All rights reserved.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* end footer */}
     </>
   );
 };

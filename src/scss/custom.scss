@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // z-index: -1;
+  z-index: -1;
   opacity: 0.4;
 }
 
@@ -91,6 +91,8 @@ body::-webkit-scrollbar {
 .white {
     color: #fff
 }
+
+
 //   Card Styles
 
 $card-hover: #f49b3f;
@@ -135,6 +137,31 @@ Button.btn-card {
     font-size: 1.1rem;
     border: 1px solid #fff;
   }
+
+// Footer Styles
+$links: #eb8e78;
+
+.footer {
+  background-color: #333;
+  color: #fff
+}
+
+.footer ul {
+  list-style: none;
+  color: var(--branco);
+  font-family: var(--DM-Sans);
+
+}
+
+.footer div {
+  padding-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer p.title {
+  text-transform: uppercase;
+  color: $links;
+}
 
 // Import Bootstrap SCSS
 @import "~bootstrap/scss/bootstrap.scss";
